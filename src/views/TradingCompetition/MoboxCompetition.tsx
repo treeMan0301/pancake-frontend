@@ -171,14 +171,14 @@ const MoboxCompetition = () => {
 
   useEffect(() => {
     const fetchGlobalLeaderboardStats = async () => {
-      const res = await fetch(`${profileApiUrl}/api/leaderboard/3/global`)
+      const res = await fetch(`${profileApiUrl}/api/leaderboard/test/global`)
       const data = await res.json()
       setGlobalLeaderboardInformation(data)
     }
 
     const fetchTeamsLeaderboardStats = async (teamId: number, callBack: (data: any) => void) => {
       try {
-        const res = await fetch(`${profileApiUrl}/api/leaderboard/3/team/${teamId}`)
+        const res = await fetch(`${profileApiUrl}/api/leaderboard/test/team/${teamId}`)
         const data = await res.json()
         callBack(data)
       } catch (e) {
