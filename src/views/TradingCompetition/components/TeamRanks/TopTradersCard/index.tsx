@@ -75,7 +75,7 @@ const TopTradersCard: React.FC<TeamRanksProps> = ({
               </Text>
             </Flex>
             <SubgraphHealthIndicator
-              subgraphName="pancakeswap/trading-competition-v3"
+              subgraphName="chef-huan/trading-comp-v3"
               inline
               obeyGlobalSetting={false}
               customDescriptions={{

@@ -125,7 +125,7 @@ const ScoreCard: React.FC<YourScoreProps> = ({
       {hasRegistered && (
         <Flex p="16px" justifyContent="flex-end">
           <SubgraphHealthIndicator
-            subgraphName="pancakeswap/trading-competition-v3"
+            subgraphName="chef-huan/trading-comp-v3"
             inline
             obeyGlobalSetting={false}
             customDescriptions={{
