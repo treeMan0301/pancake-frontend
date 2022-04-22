@@ -153,7 +153,6 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
   const subHeadingText = getSubHeadingText()
   const nextTier = userLeaderboardInformation && getNextTier(team)
   const medal = userLeaderboardInformation && getMedal(team)
-
   return (
     <Flex flexDirection="column" alignItems="center" mt="16px">
       <Heading scale="lg" textAlign="center">
@@ -221,7 +220,13 @@ const CardUserInfo: React.FC<YourScoreProps> = ({
                     <Heading textAlign="center" scale="lg">
                       #{userLeaderboardInformation.moboxVolumeRank}
                     </Heading>
-                    <Text>${userLeaderboardInformation.moboxVolume}</Text>
+                    <Text>
+                      $
+                      {(userLeaderboardInformation.moboxVolume as unknown as number).toLocaleString(undefined, {
+                        maximumFractionDigits: 2,
+                        minimumFractionDigits: 0,
+                      })}
+                    </Text>
                   </>
                 )}
               </UserRankBox>
