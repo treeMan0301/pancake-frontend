@@ -71,6 +71,8 @@ const MoboxCompetition = () => {
     team: 0,
     volume: 0,
     next_rank: 0,
+    moboxVolumeRank: '???',
+    moboxVolume: '???',
   })
   // 1. Storm
   const [team1LeaderboardInformation, setTeam1LeaderboardInformation] = useState({ teamId: 1, leaderboardData: null })
@@ -166,7 +168,7 @@ const MoboxCompetition = () => {
     const fetchUserTradingStats = async () => {
       const res = await fetch(`${profileApiUrl}/api/users/${account}`)
       const data = await res.json()
-      setUserLeaderboardInformation(data.leaderboard_mobox)
+      setUserLeaderboardInformation(data.leaderboard_test)
     }
     // If user has not registered, user trading information will not be displayed and should not be fetched
     if (account && userTradingInformation.hasRegistered) {
